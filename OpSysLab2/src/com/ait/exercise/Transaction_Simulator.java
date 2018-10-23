@@ -8,7 +8,7 @@
 
 package com.ait.exercise;
 
-public class Tranaction_Simulator {
+public class Transaction_Simulator {
 
 	public static void main(String[] args) {
 		// Create an Account object and initialize its balance to 1000.

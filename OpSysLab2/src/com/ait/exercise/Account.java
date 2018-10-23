@@ -17,7 +17,7 @@ public class Account {
 	}
 
 	// Method for reading the balance of the account
-	public double getBalance() {
+	synchronized double getBalance() {
 		// Returning the global variable
 		return balance;
 	}
@@ -29,7 +29,7 @@ public class Account {
 	}
 
 	// Method for adding to the account
-	protected void addAmount(double amount) {
+	synchronized void addAmount(double amount) {
 		// Calling our setBalance and adding the amount we take in to it
 		setBalance(this.balance + amount);
 		// Printing the new balance and noting it is increasing
@@ -46,7 +46,7 @@ public class Account {
 	}
 
 	// Method for subtracting from the account
-	protected void subtractAmount(double amount) {
+	synchronized void subtractAmount(double amount) {
 		// Calling our setBalance and subtracting the amount we take in from it
 		setBalance(this.balance - amount);
 		// Printing the new balance and noting it is decreasing
